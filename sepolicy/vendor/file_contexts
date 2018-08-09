@@ -44,3 +44,8 @@
 # Shell Script
 /(vendor|system/vendor)/bin/init\.baseband\.sh          u:object_r:init_baseband_exec:s0
 /(vendor|system/vendor)/bin/init\.goodix\.sh		u:object_r:init_fingerprint_exec:s0
+
+# XiaomiMeme
+/sys/devices/soc/qpnp-flash-led-25/leds/led:torch_0/max_brightness          u:object_r:sysfs_torch:s0
+/sys/devices/soc/qpnp-flash-led-25/leds/led:torch_1/max_brightness          u:object_r:sysfs_torch:s0
+/sys/class/timed_output/vibrator/vtg_level            u:object_r:sysfs_vibrator:s0
