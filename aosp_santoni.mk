@@ -14,13 +14,12 @@
 # limitations under the License.
 #
 
-TARGET_SCREEN_HEIGHT := 1280
-TARGET_SCREEN_WIDTH := 720
-
 $(call inherit-product, device/xiaomi/santoni/full_santoni.mk)
 
-# Inherit some common Bootleggers stuff.
-$(call inherit-product, vendor/bootleggers/config/common_full_phone.mk)
+# Inherit some common Pixel stuff.
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+TARGET_BOOT_ANIMATION_RES := 720
+TARGET_GAPPS_ARCH := arm64
 
 PRODUCT_DEVICE := santoni
 PRODUCT_BRAND := Xiaomi
@@ -28,9 +27,6 @@ PRODUCT_MODEL := Redmi 4X
 PRODUCT_NAME := bootleg_santoni
 BOARD_VENDOR := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
-
-BOOTLEGGERS_BUILD_TYPE := Shishufied
-BOOTLEGGERS_SITDOWN := true
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
